@@ -107,13 +107,14 @@ class Api_analyzer:
     def start(self):
         apks = getApkList(self.OPTIONS.input, ".apk")
         self.all = len(apks)
-        print("[+] Total apks ", self.all)
+
         args = [(apk) for apk in apks]
         pool = threadpool.ThreadPool(self.max_jobs)
         requests = threadpool.makeRequests(self.processone, args)
         [pool.putRequest(req) for req in requests]
         pool.wait()
 
+        print("[+] Total apks ", self.all)
         print("[+] Samples without duplication totally " + str(self.nodup))
         print("[+] Samples with duplication totally " + str(self.dup))
         print("[+] API call analysis error " + str(self.error))
