@@ -15,6 +15,7 @@ def getOptions(args=sys.argv[1:]):
     parser.add_argument("-a", "--apktool", default="apktool", help="Your ApkTool path.")
     parser.add_argument("-t", "--tmp", default="TMP", help="Tmp path.")
     parser.add_argument("-l", "--logging", default="LOG", help="Logging path.")
+    parser.add_argument("-m", "--maxjob", type=int, default=5, help="Max job of threadpool.")
     options = parser.parse_args(args)
     return options
 

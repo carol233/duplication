@@ -14,7 +14,7 @@ class Dex_analyzer:
         self.dex_hash = {}
         self.apk_select = {}
         self.lock = threading.Lock()
-        self.max_jobs = 5
+        self.max_jobs = self.OPTIONS.maxjob
         self.all = 0
         self.nodup = 0
         self.dup = 0

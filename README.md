@@ -22,5 +22,7 @@ On Linux OS, please specify the path where Apktool is located by parameter -a.
 
 -l, --logging, default="LOG", help="Logging path."
 
+-m, --maxjob, type=int, default=5, help="Max job of threadpool."
+
 
 **e.g. python3 main.py -i genomeapps/samples/ -o no_dex_dup.csv -f d -a /usr/local/bin/apktool** 
