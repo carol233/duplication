@@ -1,4 +1,4 @@
-# Duplication Removement Tool
+# Dedup: Duplication Removement Tool
 
 As a part of the paper, we release a tool for removing sample duplication in Android malware dataset.
 
